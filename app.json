@@ -1,0 +1,12 @@
+{
+  "name": "smart-home-app",
+  "displayName": "smart-home-app",
+  "expo": {
+    "name": "smart-home-app",
+    "slug": "smart-home-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
