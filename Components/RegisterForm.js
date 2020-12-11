@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Form, Item, Input, Button, Text } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const RegisterForm = ({ navigation }) => {
+// const RegisterForm = ({ navigation }) => {
+export default class RegisterForm extends Component {
+  render() {
     return (
       <View style={styles.container}>
         <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>
@@ -26,7 +28,7 @@ const RegisterForm = ({ navigation }) => {
             <Button
               rounded 
               onPress={() =>
-                navigation.navigate('Room')
+                this.props.navigation.navigate('Room')
               }>
                 <Text>Register</Text>
             </Button>
@@ -34,7 +36,8 @@ const RegisterForm = ({ navigation }) => {
           </LinearGradient>
       </View>
     );
-  };
+  }
+};
   const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -57,4 +60,4 @@ const RegisterForm = ({ navigation }) => {
     },
   });
   
-  export default RegisterForm;
+  // export default RegisterForm;

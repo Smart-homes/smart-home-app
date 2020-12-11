@@ -5,11 +5,11 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import SignInScreen from './SignInForm';
-import DevicesScreen from './DevicesScreen';
-import RegisterForm from './RegisterForm';
-import RoomRegistretion from './RoomRegistrtion';
-import RoomSelection from './RoomSelection';
+import SignInScreen from '../Components/SignInForm';
+import DevicesScreen from '../Components/DevicesScreen';
+import RegisterForm from '../Components/RegisterForm';
+import RoomRegistretion from '../Components/RoomRegistrtion';
+import RoomSelection from '../Components/RoomSelection';
 
 const Stack = createStackNavigator();
 

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet,View } from 'react-native';
 import { Icon, Picker, Form } from "native-base"
 import { LinearGradient } from 'expo-linear-gradient';
 
-const RoomSelection = ({ navigation }) => {
+// const RoomSelection = ({ navigation }) => {
+  export default class RoomSelection extends Component {
+    render() {
     return (
       <View style={styles.container}>
         <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>
@@ -11,6 +13,7 @@ const RoomSelection = ({ navigation }) => {
         </LinearGradient>
       </View>
     );
+    }
   };
   const styles = StyleSheet.create({
     container: {
@@ -20,4 +23,5 @@ const RoomSelection = ({ navigation }) => {
       flex: 1,
     }
   });
-  export default RoomSelection;
+  
+  // export default RoomSelection;

@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, StyleSheet,View } from 'react-native';
 import DeviceButton from './DeviceButton';
 
-const DevicesScreen = ({ navigation, route }) => {
+// const DevicesScreen = ({ navigation, route }) => {
+export default class DevicesScreen extends Component {
+  render() {    
     return (
       <View style={styles.container}>
         <DeviceButton title="Fan"
@@ -23,7 +25,8 @@ const DevicesScreen = ({ navigation, route }) => {
         {/* <Text>This is { route.params.name }'s profile</Text> */}
       </View>
     );
-  };
+  }
+};
 
   const styles = StyleSheet.create({
     container:{
@@ -34,4 +37,4 @@ const DevicesScreen = ({ navigation, route }) => {
     },
   });
 
-  export default DevicesScreen;
+  // export default DevicesScreen;
