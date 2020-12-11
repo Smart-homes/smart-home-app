@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { LinearGradient } from 'expo-linear-gradient';
+// import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,7 +17,7 @@ export default function App() {
   return (
   <View style={styles.container}>
   <NavigationContainer >
-    <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>        
+    {/* <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>         */}
     <Stack.Navigator>
       <Stack.Screen
         name="Home"
@@ -29,7 +29,7 @@ export default function App() {
       <Stack.Screen name="Room" component={RoomRegistretion}/>
       <Stack.Screen name="RoomSelection" component={RoomSelection}/>
      </Stack.Navigator>
-    </LinearGradient>
+    {/* </LinearGradient> */}
   </NavigationContainer>
   </View>
   );
