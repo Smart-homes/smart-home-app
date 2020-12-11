@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { StyleSheet, View} from 'react-native';
-import { Form, Item, Input ,Button, Text} from 'native-base';
+import { Container, Button, Content, Form, Item, Input, Text } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 
 // import buttonTheme from './Themes/buttonTheme';
+// import { Text } from 'react-native';
 // const SignInScreen = ({ navigation }) => {
 export default class SignInScreen extends Component {
   render() {

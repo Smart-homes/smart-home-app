@@ -2,8 +2,11 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Form, Item, Input, Button, Text } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
+import RoomRegistretion from './RoomRegistrtion';
 
-const RoomRegistretion = ({ navigation }) => {
+// const RoomRegistretion = ({ navigation }) => {
+export default class RoomRegistretion extends Component {
+  render() { 
     return (
       <View style={styles.container}>
         <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>
@@ -24,7 +27,8 @@ const RoomRegistretion = ({ navigation }) => {
         </LinearGradient>
       </View>
     );
-  };
+  }
+};
 
   const styles = StyleSheet.create({
     container: {
@@ -47,4 +51,4 @@ const RoomRegistretion = ({ navigation }) => {
       flex: 1,
     }
   });
-  export default RoomRegistretion;
+  // export default RoomRegistretion;
