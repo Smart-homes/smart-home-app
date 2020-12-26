@@ -15,23 +15,23 @@ const Stack = createStackNavigator();
 
 export default function App() {
   return (
-  <View style={styles.container}>
-  <NavigationContainer >
-    {/* <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>         */}
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={SignInScreen}
-        options={{ title: 'Welcome' }}
-      />
-      <Stack.Screen name="Devices" component={DevicesScreen} />
-      <Stack.Screen name="form" component={RegisterForm}/>
-      <Stack.Screen name="Room" component={RoomRegistretion}/>
-      <Stack.Screen name="RoomSelection" component={RoomSelection}/>
-     </Stack.Navigator>
-    {/* </LinearGradient> */}
-  </NavigationContainer>
-  </View>
+    <View style={styles.container}>
+      <NavigationContainer >
+        {/* <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>         */}
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Home"
+            component={SignInScreen}
+            options={{ title: 'Welcome' }}
+          />
+          <Stack.Screen name="Devices" component={DevicesScreen} />
+          <Stack.Screen name="form" component={RegisterForm} />
+          <Stack.Screen name="RoomSelection" component={RoomSelection} />
+          <Stack.Screen name="Room" component={RoomRegistretion} />
+        </Stack.Navigator>
+        {/* </LinearGradient> */}
+      </NavigationContainer>
+    </View>
   );
 }
 

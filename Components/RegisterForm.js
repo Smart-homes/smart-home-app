@@ -11,53 +11,57 @@ export default class RegisterForm extends Component {
         <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>
           <Form style={styles.form}>
             <Item rounded last style={styles.field}>
-              <Input placeholder='First Name'/>
+              <Input placeholder='First Name' />
             </Item>
             <Item rounded last style={styles.field}>
-              <Input placeholder='Last Name'/>
+              <Input placeholder='Last Name' />
             </Item>
             <Item rounded last style={styles.field}>
-              <Input placeholder='City'/>
+              <Input placeholder='City' />
             </Item>
             <Item rounded last style={styles.field}>
-              <Input placeholder='Email'/>
+              <Input placeholder='Email' />
             </Item>
             <Item rounded last style={styles.field} >
-              <Input placeholder='Password'/>
+              <Input placeholder='Password' />
             </Item>
             <Button
-              rounded 
+              rounded style={styles.btn}
               onPress={() =>
-                this.props.navigation.navigate('Room')
+                this.props.navigation.navigate('RoomSelection')
               }>
-                <Text>Register</Text>
+              <Text>Register</Text>
             </Button>
           </Form>
-          </LinearGradient>
+        </LinearGradient>
       </View>
     );
   }
 };
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    },
-    form: {
-      marginTop: '35%',
-      marginBottom: '15%',
-      alignItems: 'center',
-      justifyContent:'center',
-    },
-    field: {
-      justifyContent:'space-around',
-      marginBottom: '5%',
-      marginLeft:'5%',
-      marginRight:'5%',
-      backgroundColor:'#fff',
-    },
-    gradient: {
-      flex: 1,
-    },
-  });
-  
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  form: {
+    marginTop: '35%',
+    marginBottom: '15%',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  field: {
+    justifyContent: 'space-around',
+    marginBottom: '5%',
+    marginLeft: '5%',
+    marginRight: '5%',
+    backgroundColor: '#fff',
+  },
+  btn: {
+    alignSelf: 'center',
+    // position: 'absolute',
+  },
+  gradient: {
+    flex: 1,
+  },
+});
+
   // export default RegisterForm;
