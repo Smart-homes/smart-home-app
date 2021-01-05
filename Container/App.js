@@ -8,9 +8,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SignInScreen from '../Components/SignInForm';
 import DevicesScreen from '../Components/DevicesScreen';
 import RegisterForm from '../Components/RegisterForm';
-import RoomRegistretion from '../Components/RoomRegistrtion';
+import DeviceRegistretion from '../Components/DeviceRegistrtion';
 import RoomSelection from '../Components/RoomSelection';
-
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -24,10 +23,11 @@ export default function App() {
             component={SignInScreen}
             options={{ title: 'Welcome' }}
           />
+          <Stack.Screen name="signin" component={SignInScreen} />
           <Stack.Screen name="Devices" component={DevicesScreen} />
-          <Stack.Screen name="form" component={RegisterForm} />
-          <Stack.Screen name="RoomSelection" component={RoomSelection} />
-          <Stack.Screen name="Room" component={RoomRegistretion} />
+          <Stack.Screen name="register" component={RegisterForm} />
+          <Stack.Screen name="home" component={RoomSelection} />
+          <Stack.Screen name="Room" component={DeviceRegistretion} />
         </Stack.Navigator>
         {/* </LinearGradient> */}
       </NavigationContainer>

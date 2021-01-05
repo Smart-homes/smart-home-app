@@ -28,9 +28,14 @@ export default class RegisterForm extends Component {
             <Button
               rounded style={styles.btn}
               onPress={() =>
-                this.props.navigation.navigate('RoomSelection')
+                this.props.navigation.navigate('home')
               }>
               <Text>Register</Text>
+            </Button>
+            <Button transparent style={styles.btn}
+              onPress={() =>
+                this.props.navigation.navigate('signin')}>
+              <Text last>Already SignIn</Text>
             </Button>
           </Form>
         </LinearGradient>

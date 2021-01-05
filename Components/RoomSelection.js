@@ -3,8 +3,8 @@ import { StyleSheet, View } from 'react-native';
 import DevicesButton from './DeviceButton';
 import { Button, Icon, Text } from "native-base";
 import { LinearGradient } from 'expo-linear-gradient';
-export default class RoomSelection extends Component {
 
+export default class RoomSelection extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,15 +16,7 @@ export default class RoomSelection extends Component {
       ],
     };
   }
-  onAddRooms = (room) => {
-    console.log('yetay')
-    //this.setState(divices = { title: 'dev4' });
-    console.log(this.state.rooms);
-    this.state.rooms.push(room);
-    this.setState({ rooms: this.state.rooms });
-    console.log(":)");
-    console.log(this.state.rooms);
-  }
+
   render() {
     var rooms = this.state.rooms.map((room) =>
       <DevicesButton
@@ -40,12 +32,6 @@ export default class RoomSelection extends Component {
       <View style={styles.container}>
         <LinearGradient colors={['#2974FA', '#38ABFD', '#43D4FF']} style={styles.gradient}>
           {rooms}
-          <Button style={styles.add}>
-            <Icon
-              name='add' size={24}
-              onPress={() =>
-                this.props.navigation.navigate('Room', { onAddRooms: this.onAddRooms })} />
-          </Button>
         </LinearGradient>
       </View>
     );
@@ -54,7 +40,7 @@ export default class RoomSelection extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // flexDirection: 'row',
+    flexDirection: 'column',
   },
   roombtn: {
     alignSelf: 'center',

@@ -15,6 +15,11 @@ export default class DevicesScreen extends Component {
       ]
     }
   };
+  onAddRooms = (device) => {
+    //this.setState(divices = { title: 'dev4' });
+    this.state.devices.push(device);
+    this.setState({ devices: this.state.devices });
+  }
   render() {
     var devices = this.state.devices.map((device) =>
       <DevicesButton
@@ -30,14 +35,9 @@ export default class DevicesScreen extends Component {
           <Button style={styles.add}>
             <Icon
               name='add' size={24}
-            // onPress={() =>
-            //   this.props.navigation.navigate('Room', { onAddRooms: this.onAddRooms })} 
-            />
+              onPress={() =>
+                this.props.navigation.navigate('Room', { onAddRooms: this.onAddRooms })} />
           </Button>
-          {/* <DeviceButton title="Fan"
-            onPress={() => console.log("make function call to function that does API call")}>
-          </DeviceButton> */}
-          {/* <Text>This is { route.params.name }'s profile</Text> */}
         </LinearGradient>
       </View>
     );

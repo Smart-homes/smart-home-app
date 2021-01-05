@@ -19,13 +19,16 @@ export default class SignInScreen extends Component {
             <Item rounded last style={styles.field}>
               <Input placeholder="Password" />
             </Item>
-            {/* <StyleProvider style={buttonTheme()}> */}
             <Button rounded style={styles.btn}
               onPress={() =>
-                this.props.navigation.navigate('form')}>
+                this.props.navigation.navigate('home')}>
               <Text last>Sign In</Text>
             </Button>
-            {/* </StyleProvider> */}
+            <Button transparent style={styles.btn}
+              onPress={() =>
+                this.props.navigation.navigate('register')}>
+              <Text last>Rergister</Text>
+            </Button>
           </Form>
         </LinearGradient>
       </View>
