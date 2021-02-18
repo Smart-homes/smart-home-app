@@ -4,20 +4,20 @@ import { Form, Item, Input, Button, Text } from 'native-base';
 import { LinearGradient } from 'expo-linear-gradient';
 
 // const RoomRegistretion = ({ navigation }) => {
-export default class DeviceRegistretion extends Component {
+export default class RoomRegistretion extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deviceName: '',
-      deviceId: '',
+      roomName: '',
+      roomId: '',
     }
 
   };
   onNameChange = (e) => {
-    this.setState({ deviceName: e.target.value });
+    this.setState({ roomName: e });
   }
   onIdChange = (e) => {
-    this.setState({ deviceId: e.target.value })
+    this.setState({ roomId: e });
   }
   render() {
     return (
@@ -26,14 +26,14 @@ export default class DeviceRegistretion extends Component {
           <Form style={styles.form}>
             <Item rounded style={styles.field}>
               <Input
-                placeholder='Device Name'
+                placeholder='Room Name'
                 onChangeText={this.onNameChange.bind(this)}
               />
             </Item>
             <Item rounded style={styles.field}>
               <Input
                 onChangeText={this.onIdChange}
-                placeholder='Device ID'
+                placeholder='Room-ID'
               />
             </Item>
             {/* // onPress={() => navigation.navigate('RoomSelection')} */}
@@ -41,13 +41,13 @@ export default class DeviceRegistretion extends Component {
               rounded style={styles.btn}
               // onPress={this.props.onAddRoom}
               onPress={() => {
-                console.log(this.props.route);
-                this.props.route.params.onAddRooms({ title: this.state.deviceName });
-                this.props.navigation.navigate('Devices',
+                //console.log(this.props.route);
+                this.props.route.params.onAddRooms({ title: this.state.roomName });
+                this.props.navigation.navigate('RoomSelection',
                   // { title: this.state.roomName, roomId: this.state.roomId }
-                )
+                );
               }}>
-              <Text>Add Device</Text>
+              <Text>Add Rooms</Text>
             </Button>
           </Form>
         </LinearGradient>
