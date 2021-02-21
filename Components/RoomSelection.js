@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
 import DevicesButton from './DeviceButton';
-//import Drawer from './Drawer';
 import SideBar from './Sidebar';
-import { Drawer, Button, Icon, Text } from "native-base";
+import { Button, Icon, Text } from "native-base";
 import { LinearGradient } from 'expo-linear-gradient';
 import * as SecureStore from 'expo-secure-store';
 export default class RoomSelection extends Component {
