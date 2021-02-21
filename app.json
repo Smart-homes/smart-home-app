@@ -5,6 +5,9 @@
     "name": "smart-home-app",
     "slug": "smart-home-app",
     "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "android": {
       "package": "com.lazypanda.smarthome"
     }
